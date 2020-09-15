@@ -8,4 +8,7 @@ title: About
 
 Hi, Welcome to my Blog. My Name is Saad Shahzad & i'm a Cyber Security Engineer by profession and a part time bug hunter.I graduated with my Bachelor's majoring in Computer Science in 2019 and i'm a security-geek (if that is a word :p). I became aware of this field in 2018 and have been working since then. I have pentested a few clients (Not gonna name them for obvious reasons lol:D). My Skills include Website Penetration Testing, Network Penetration Testing & Vulnerability Assessment. I also develop automation tools & exploits in python.  
 
-<a class="github" href="https://github.com/saad-20"> <span class="fa fa-github"> ::before</span> </a><span class="text-github">Github</span
+[![alt text][1.1]][1]
+
+
+[1]: https://github.com/saad-20
