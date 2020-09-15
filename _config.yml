@@ -2,7 +2,6 @@ title: SAAD-Blog
 description: "This blog contains writeups and different hacking techniques"
 author:
   name: "SAAD"
-  email: ""
   url: "https://saad-20.github.io"
 
 baseurl: /
@@ -28,5 +27,5 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
-owner : "SAAD"
+owner : "SAAD SHAHZAD"
 year : "2020"
