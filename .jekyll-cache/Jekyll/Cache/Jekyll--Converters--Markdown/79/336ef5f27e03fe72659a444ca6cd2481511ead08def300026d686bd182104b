@@ -1,0 +1,36 @@
+I"�<p>Hey Hackers, Today’s article will be a Writeup on Basic Pentesting Room on TryHackme. 
+This Room is Free and Anyone can join. Plus, This Room is amazing if you want to get 
+your hands dirty for the first time in the field of Hacking. So lets Get Started</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/LOGO.png" />
+</p>
+<p>According to the room, it is described as where the hacker will practice their skills in web and privilige escalation.
+So let’s get Hacking :)</p>
+
+<p><strong>TASK 1: Deploy The machine and connect to our network</strong></p>
+
+<p>After Deploying the machine, The room will assign you an IP address to connect on. You also would require to have openvpn connection in order to connect to the server</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/1.Find_the_services.png" />
+</p>
+
+<p><strong>TASK 2: Find the services exposed by the machine</strong></p>
+
+<p>After we have been assigned an IP address, let run nmap in order to find the network services it is running and what OS it is. I typically use the following nmap script</p>
+
+<p><code class="language-plaintext highlighter-rouge">nmap -A -p- -T5 --script vuln 10.10.89.26 -vv</code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/2.NMAP_SCAN.png" />
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/3.OPEN_PORTS.png" />
+</p>
+
+<p>From the First Screenshot, we saw the following ports were opened: -</p>
+<ol>
+  <li>22</li>
+  <li>80</li>
+  <li>8080</li>
+  <li>139</li>
+  <li>445</li>
+</ol>
+:ET
