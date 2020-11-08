@@ -1,4 +1,4 @@
-I"U<p>Hey Hackers, Today’s article will be a Writeup on Basic Pentesting Room on TryHackme. 
+I"<p>Hey Hackers, Today’s article will be a Writeup on Basic Pentesting Room on TryHackme. 
 This Room is Free and Anyone can join. Plus, This Room is amazing if you want to get 
 your hands dirty for the first time in the field of Hacking. So lets Get Started</p>
 
@@ -94,18 +94,26 @@ By reading the staff.txt file, we found the two usernames kay and Jan. From our 
   <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/14.BRUTE_FORCE_PASSWORD.png" />
 </p>
 
-<p><strong>TASK 5 &amp; 6. What is the username and password?</strong>    <br />
+<p><strong>TASK 5 &amp; 6: What is the username and password?</strong>    <br />
 From the screenshot above, we found the password for jan. We can now use his credentials in order to enter his account. Lets fill the answers of each task</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/16.QUESTIONS.png" />
 </p>
 
-<p><strong>TASK 7 What service do you use to access the server(answer in abbreviation in all caps)?</strong>   <br />
+<p><strong>TASK 7: What service do you use to access the server(answer in abbreviation in all caps)?</strong>   <br />
 Lets use his password in order to connect using ssh since port 22 is open. The command for enter through ssh is<br />
 <code class="language-plaintext highlighter-rouge">ssh jan@10.10.89.26</code>     <br />
 As you can from the screenshot we have successfully entered into jan account</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/15.SSH.png" />
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/16.QUESTIONS.png" />
 </p>
+
+<p><strong>TASK 8: Enumerate the machine to find any vectors for privilege escalation</strong>  <br />
+After we have successfully logged into the the jan account. We will enumerate and find what files it has or any possible vectors for privilige escalation.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/17.Found_id_rsa.png" />
+</p>
+<p>From the screenshot above, we found .ssh file with access to a user called kay. It also shows that kay is the root user (<strong>Task 9 Answer</strong>)</p>
 
 :ET
