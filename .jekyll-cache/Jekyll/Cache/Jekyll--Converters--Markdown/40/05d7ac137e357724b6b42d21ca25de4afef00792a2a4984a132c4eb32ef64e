@@ -1,0 +1,13 @@
+I"�<p>Hey Hackers, Today’s article will be about Cross-site scripting. We will be discussing about different types of Cross-site scripting but before that we 
+need to know what is cross site scripting. So let’s get started :)</p>
+<p align="center">
+  <img src="https://www.davosnetworks.com/wp-content/uploads/2020/07/cross-site-scripting-xss-864x454.jpg" />
+</p>
+<p><strong>What is Cross site Scripting?</strong> <br />
+Cross site scripting a.k.a xss is a type of an injection attack where malicious code is being executed on the website i.e. Malicious JavaScript code. Xss is typically can be founded where input fields like search fields, comment fields, or url defined parameters. XSS is marked as A7 on OWASP TOP 10. As from an attacker perspective, xss can allow a hacker to send malicious script to the victim, thus when the victim will execute the script on the browser side, the attacker can retrieve data from the victim or host a malicious code that can gain access to their computer. I think now you got the idea what xss is :p. Let’s just cut to the chase and describe the three types of xss. The three types of xss are: -</p>
+<ol>
+  <li>Reflected XSS</li>
+  <li>Stored XSS</li>
+  <li>DOM-Based XSS</li>
+</ol>
+:ET

@@ -1,4 +1,4 @@
-I"<p>Hey Hackers, Today’s article will be a Writeup on Basic Pentesting Room on TryHackme. 
+I"�(<p>Hey Hackers, Today’s article will be a Writeup on Basic Pentesting Room on TryHackme. 
 This Room is Free and Anyone can join. Plus, This Room is amazing if you want to get 
 your hands dirty for the first time in the field of Hacking. So lets Get Started</p>
 
@@ -116,4 +116,46 @@ After we have successfully logged into the the jan account. We will enumerate an
 </p>
 <p>From the screenshot above, we found .ssh file with access to a user called kay. It also shows that kay is the root user (<strong>Task 9 Answer</strong>)</p>
 
+<p><strong>TASK 9: What is the name of the other user?</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/question_image.png" />
+</p>
+
+<p><strong>TASK 10: If you found another user, what can you do with it?</strong> <br />
+Since we know that the other user’s name is kay and has root priviliges plus there is also an ssh file of possibility containg ssh keys. Lets see what does the file contain by using the <code class="language-plaintext highlighter-rouge">ls -al</code> command</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/17.Found_id_rsa.png" />
+</p>
+
+<p><strong>TASK 11: What is the final password you obtained?</strong> <br />
+From the screenshot in Task 10, we can see that it contains the ssh-key for kay. In order to crack the key we need to copy it into our local machine.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/18.COPIED_ID_RSA.png" />
+</p>
+<p>As you can from the screenshot, we copied the key into our local machine. Now a little bit of googling, we found that in order to crack the key, one must convert the key into a hash for in order to crack it using dictionary attack. We will be using ssh2john for converting the key into a hash. The command is<br />
+<code class="language-plaintext highlighter-rouge">python /usr/share/john/ssh2john.py id_rsa &gt; sshkeyhash.txt</code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/19.Converting_to_Hash.png" />
+</p>
+<p>Using the <code class="language-plaintext highlighter-rouge">cat</code> command we can see the contents of the file has been converted into a hash. <br />
+Now in order to crack the key we will be using John the ripper tool with our favourite wordlist i.e. ofcourse rockyou.txt :p. The command for running John the ripper is<br />
+<code class="language-plaintext highlighter-rouge">john --wordlist=/usr/share/wordlist/rockyou.txt sshkeyhash.txt</code></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/20.Cracking_password.png" />
+</p>
+<p>After waiting for a while, we successfully cracked the password for kay :D.</p>
+
+<p><strong>Changing to kay user</strong> <br />
+The command that will be used in order for to change to kay is<br />
+<code class="language-plaintext highlighter-rouge">ssh -i id_rsa kay</code> <br />
+where id_rsa is the original ssh-key and kay is the user. After entering the password i.e. beeswax. We are successfully logged in as kay:)</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/21.Changing_to_kay.png" />
+</p>
+
+<p>Navigate the files using <code class="language-plaintext highlighter-rouge">ls</code> command and you will find the flag with its contents</p>
+<p align="center">
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/Basic_Pentesting_Images/22.Grabbed_Flag.png" />
+</p>
+<p>Congrats!You have completed the lab.:) However, this is not the end of it, try escalating its priviliges on your own and you will find a bonus flag with it :D</p>
 :ET

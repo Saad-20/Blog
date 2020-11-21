@@ -1,0 +1,35 @@
+I"Ì<section>
+  
+
+    
+    
+    
+        <h3>This year's posts</h3>
+    
+
+    
+      
+        <ul>
+      
+        <li><time>15 Nov - </time>
+          <a href="/Basics-of-XSS">
+            Basics of Xss
+          </a>
+        </li>
+    
+      
+        
+        
+        
+      
+        <li><time>08 Nov - </time>
+          <a href="/Basic-Pentesting-TryHackMe">
+            Basic Pentesting (Try Hack Me)
+          </a>
+        </li>
+    
+    </ul>
+
+  
+</section>
+:ET
