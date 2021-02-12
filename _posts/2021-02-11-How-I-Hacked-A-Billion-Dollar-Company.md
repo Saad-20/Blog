@@ -1,5 +1,5 @@
 ---
-title: How I Hacked A Billion Dollar Company :D
+title: How I Hacked A Billion Dollar Company
 published: true
 ---
 Hi Hackers, Today article is about how i hacked into a Billion dollar company i.e. SSRF via xmlrpc.php. I always wanted to find an SSRF in a website who knew i would find it during my pentest. I wouldn't disclose the company name so lets just call it redacted (Ofcourse :p).
