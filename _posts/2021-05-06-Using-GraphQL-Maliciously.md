@@ -45,23 +45,23 @@ Let's check what fields are available for the query
 </p>   
 There are two availble fields that are being used those are ```ip``` & ```output```   
 Let's give it a test of how it works. The query that i injected is: -   
-{   
+```{   
    Ping(ip:"127.0.0.1"){   
      ip   
      output   
   }   
-}     
+}```      
 We get the output that it makes the call to the localhost.   
 <p align="center">
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/6_Testing_ping_field.png" />
 </p>   
 let's try to break the query by inserting a semicolon and check if we can read the passwd file since the backend is a linux server running.The payload being used in the query is : -    
-{   
+```{   
    Ping(ip:"; cat /etc/passwd"){   
      ip   
      output   
   }   
-}    
+}```    
 <p>
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/7_etc_passwd.png">
 </p>   
@@ -78,4 +78,4 @@ Reverse shell got executed and we got a remote code execution. Thus, compromisin
 <p>
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/10_server_hacked.png">
 </p>   
-Now we got a reverse shell, we need to now escalate our privileges to become root. Lets send our linpeas script to the compromised server to check what abnomalies can be exploit to become root. We run ourserver where our linpeas is located.
+Now we got a reverse shell, we need to now escalate our privileges to become root. Lets send our linpeas script to the compromised server to check what abnomalies can be exploited to become root. We run our server where our linpeas is located.
