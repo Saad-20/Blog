@@ -100,6 +100,7 @@ Analyzing the results from linpeas script, we found a potential loophole that ca
 </p>    
 By going over PayloadsAllTheThings, i copied the payload from there and modified it with our ip address and the port we chose.
 Then i hosted on my server and then remotely downloading the payload on the remote hacked server.    
+<p>    
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/16_reverse_shell_server_js.png">
 </p>    
 After that we ran our script while at the same time on our other terminal netcat is running in order to get a reverse shell and gain access to the server as root.    
