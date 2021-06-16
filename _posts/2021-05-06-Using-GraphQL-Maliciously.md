@@ -93,5 +93,19 @@ once linpeas script is downloaded in the victim machine, we will make the file e
 ```./linpeas.sh```    
 <p>
  <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/13_running_linpeas.png">
+</p>    
+Analyzing the results from linpeas script, we found a potential loophole that can help us gain root access. The one we found is that we can run node as sudo.    
+<p>
+<img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/14_found_potential_loophole.png">
+</p>    
+By going over PayloadsAllTheThings, i copied the payload from there and modified it with our ip address and the port we chose.
+Then i hosted on my server and then remotely downloading the payload on the remote hacked server.    
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/16_reverse_shell_server_js.png">
+</p>    
+After that we ran our script while at the same time on our other terminal netcat is running in order to get a reverse shell and gain access to the server as root.    
+<p>
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/17_downloading_server_js.png">
+</p>    
+<p>
+ <img src="https://raw.githubusercontent.com/Saad-20/Blog/master/assets/GRAPHQL/19_root_access.png">
 </p>
- 
