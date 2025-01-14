@@ -8,7 +8,7 @@ title: About
 </p>   
 <p align="center"><br>
 <div align="center">
- <script src="https://tryhackme.com/badge/98731"></script>
+
 </div><br>
 **ABOUT ME**     
 <br> 
